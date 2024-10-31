@@ -1,0 +1,26 @@
+{
+  "name": "boilerplate-experiments-threejs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tweakpane/core": "^2.0.4",
+    "@types/three": "^0.169.0",
+    "@zooizooi/eslint-config": "^1.1.0",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.10",
+    "vite-plugin-glsl": "^1.3.0"
+  },
+  "dependencies": {
+    "@zooizooi/asset-loader": "^1.2.1",
+    "@zooizooi/utils": "^1.0.12",
+    "gsap": "^3.12.5",
+    "three": "^0.170.0",
+    "tweakpane": "^4.0.4"
+  }
+}
