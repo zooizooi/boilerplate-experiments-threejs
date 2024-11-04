@@ -1,11 +1,10 @@
 import { BoxGeometry, Mesh, MeshStandardMaterial, PointLight, Scene } from 'three';
-import { FolderApi } from 'tweakpane';
-import Debugger from '@/Debugger';
+import Debugger, { DebuggerFolder } from '@/Debugger';
 import onUpdate from '@/hooks/onUpdate';
 
 export default class World {
     public scene = new Scene();
-    private debugger: FolderApi;
+    private debugger: DebuggerFolder;
     private box: Mesh;
 
     constructor() {
