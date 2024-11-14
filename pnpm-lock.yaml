@@ -8,12 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@tweakpane/plugin-essentials':
+        specifier: ^0.2.1
+        version: 0.2.1(tweakpane@4.0.5)
       '@zooizooi/asset-loader':
         specifier: ^1.2.1
         version: 1.2.1
       '@zooizooi/utils':
-        specifier: ^1.0.12
-        version: 1.0.12
+        specifier: ^1.0.16
+        version: 1.0.16
       gsap:
         specifier: ^3.12.5
         version: 3.12.5
@@ -21,27 +24,27 @@ importers:
         specifier: ^0.170.0
         version: 0.170.0
       tweakpane:
-        specifier: ^4.0.4
-        version: 4.0.4
+        specifier: ^4.0.5
+        version: 4.0.5
     devDependencies:
       '@tweakpane/core':
-        specifier: ^2.0.4
-        version: 2.0.4
+        specifier: ^2.0.5
+        version: 2.0.5
       '@types/three':
-        specifier: ^0.169.0
-        version: 0.169.0
+        specifier: ^0.170.0
+        version: 0.170.0
       '@zooizooi/eslint-config':
-        specifier: ^1.1.0
-        version: 1.1.0(typescript@5.6.3)
+        specifier: ^1.1.2
+        version: 1.1.2(typescript@5.6.3)
       typescript:
         specifier: ~5.6.3
         version: 5.6.3
       vite:
-        specifier: ^5.4.10
-        version: 5.4.10
+        specifier: ^5.4.11
+        version: 5.4.11
       vite-plugin-glsl:
         specifier: ^1.3.0
-        version: 1.3.0(rollup@4.24.3)(vite@5.4.10)
+        version: 1.3.0(rollup@4.24.3)(vite@5.4.11)
 
 packages:
 
@@ -350,8 +353,13 @@ packages:
     peerDependencies:
       eslint: '>=8.40.0'
 
-  '@tweakpane/core@2.0.4':
-    resolution: {integrity: sha512-0P3xcmvjBr8AmqMOEDNYIbkiaPwvQPkj8VeJX+8ZYkpRgWWbNp1HLbld0MDI0WJHdom89osH3MmCDLnWEXKI2w==}
+  '@tweakpane/core@2.0.5':
+    resolution: {integrity: sha512-punBgD5rKCF5vcNo6BsSOXiDR/NSs9VM7SG65QSLJIxfRaGgj54ree9zQW6bO3pNFf3AogiGgaNODUVQRk9YqQ==}
+
+  '@tweakpane/plugin-essentials@0.2.1':
+    resolution: {integrity: sha512-VbFU1/uD+CJNFQdfLXUOLjeG5HyUZH97Ox9CxmyVetg1hqjVun3C83HAGFULyhKzl8tSgii8jr304r8QpdHwzQ==}
+    peerDependencies:
+      tweakpane: ^4.0.0
 
   '@tweenjs/tween.js@23.1.3':
     resolution: {integrity: sha512-vJmvvwFxYuGnF2axRtPYocag6Clbb5YS7kLL+SO/TeVFzHqDIWrNKYtcsPMibjDx9O+bu+psAy9NKfWklassUA==}
@@ -365,8 +373,8 @@ packages:
   '@types/stats.js@0.17.3':
     resolution: {integrity: sha512-pXNfAD3KHOdif9EQXZ9deK82HVNaXP5ZIF5RP2QG6OQFNTaY2YIetfrE9t528vEreGQvEPRDDc8muaoYeK0SxQ==}
 
-  '@types/three@0.169.0':
-    resolution: {integrity: sha512-oan7qCgJBt03wIaK+4xPWclYRPG9wzcg7Z2f5T8xYTNEF95kh0t0lklxLLYBDo7gQiGLYzE6iF4ta7nXF2bcsw==}
+  '@types/three@0.170.0':
+    resolution: {integrity: sha512-CUm2uckq+zkCY7ZbFpviRttY+6f9fvwm6YqSqPfA5K22s9w7R4VnA3rzJse8kHVvuzLcTx+CjNCs2NYe0QFAyg==}
 
   '@types/webxr@0.5.20':
     resolution: {integrity: sha512-JGpU6qiIJQKUuVSKx1GtQnHJGxRjtfGIhzO2ilq43VZZS//f1h1Sgexbdk+Lq+7569a6EYhOWrUpIruR/1Enmg==}
@@ -434,11 +442,11 @@ packages:
   '@zooizooi/asset-loader@1.2.1':
     resolution: {integrity: sha512-WsJztCvLMOn/szstG35Xc6PB0V1KZmUOGD8q6kNSLX7Z6+XLbupg/ALf7JP7h19eUQzn2E2Iy2uDPXN2eywwiA==, tarball: https://npm.pkg.github.com/download/@zooizooi/asset-loader/1.2.1/8bfde0afe292b5556593381951c5c8ba37ed92d6}
 
-  '@zooizooi/eslint-config@1.1.0':
-    resolution: {integrity: sha512-JKNs5oh0JZS5OupB5BxZnQsPtaricunMn4ahcSb1fm2HD8K+t4hCUSWSW3RFt8a2lWxKMM9ckBJw8BxB3UlzIQ==, tarball: https://npm.pkg.github.com/download/@zooizooi/eslint-config/1.1.0/0d6e1c2ccbd165063584ebc1c41378d473fa9c3c}
+  '@zooizooi/eslint-config@1.1.2':
+    resolution: {integrity: sha512-YfuykRIPptjfRlcx0pGP7mx3R1Y5IMkK6bUzAv6bP8aypyZMDRffr3oa6ndYpbLuVpeDMmV1Leg7QRIkSO2JIg==, tarball: https://npm.pkg.github.com/download/@zooizooi/eslint-config/1.1.2/d0b07f426ae3d3113c3f38f949bed19bcd483a70}
 
-  '@zooizooi/utils@1.0.12':
-    resolution: {integrity: sha512-FIEkmodFJkbBpnP3TIa5VPaBZ8n8OUjVZuAGTCTsmYK/gxhi5zbCO1YCAaGgdsqrrQ0YczSUpbfQm1bKbg21Pw==, tarball: https://npm.pkg.github.com/download/@zooizooi/utils/1.0.12/1c604c65fe62093a21810aa6a57d0a0ec7486d01}
+  '@zooizooi/utils@1.0.16':
+    resolution: {integrity: sha512-0hEuFbDfYaHQeIncHEg4tOzBPGHKAu02IKl/IRx9YNlcVTa7zg3GpvQZrJrWIIjbJ9wOhubcTJIUDdF164ClwA==, tarball: https://npm.pkg.github.com/download/@zooizooi/utils/1.0.16/f593154b74a862ecee25135cce0747c4012488f1}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -816,8 +824,8 @@ packages:
     peerDependencies:
       typescript: '>=4.2.0'
 
-  tweakpane@4.0.4:
-    resolution: {integrity: sha512-RkWD54zDlEbnN01wQPk0ANHGbdCvlJx/E8A1QxhTfCbX+ROWos1Ws2MnhOm39aUGMOh+36TjUwpDmLfmwTr1Fg==}
+  tweakpane@4.0.5:
+    resolution: {integrity: sha512-rxEXdSI+ArlG1RyO6FghC4ZUX8JkEfz8F3v1JuteXSV0pEtHJzyo07fcDG+NsJfN5L39kSbCYbB9cBGHyuI/tQ==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -846,8 +854,8 @@ packages:
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
 
-  vite@5.4.10:
-    resolution: {integrity: sha512-1hvaPshuPUtxeQ0hsVH3Mud0ZanOLwVTneA1EgbAM5LhaZEqyPWGRQ7BtaMvUrTDeEaC8pxtj6a6jku3x4z6SQ==}
+  vite@5.4.11:
+    resolution: {integrity: sha512-c7jFQRklXua0mTzneGW9QVyxFjUgwcihC4bXEtujIo2ouWCe1Ajt/amn2PCxYnhYfd5k09JX3SB7OYWFKYqj8Q==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1097,7 +1105,11 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tweakpane/core@2.0.4': {}
+  '@tweakpane/core@2.0.5': {}
+
+  '@tweakpane/plugin-essentials@0.2.1(tweakpane@4.0.5)':
+    dependencies:
+      tweakpane: 4.0.5
 
   '@tweenjs/tween.js@23.1.3': {}
 
@@ -1107,7 +1119,7 @@ snapshots:
 
   '@types/stats.js@0.17.3': {}
 
-  '@types/three@0.169.0':
+  '@types/three@0.170.0':
     dependencies:
       '@tweenjs/tween.js': 23.1.3
       '@types/stats.js': 0.17.3
@@ -1205,7 +1217,7 @@ snapshots:
     dependencies:
       three: 0.170.0
 
-  '@zooizooi/eslint-config@1.1.0(typescript@5.6.3)':
+  '@zooizooi/eslint-config@1.1.2(typescript@5.6.3)':
     dependencies:
       '@eslint/js': 9.13.0
       '@stylistic/eslint-plugin': 2.10.0(eslint@9.13.0)(typescript@5.6.3)
@@ -1216,7 +1228,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@zooizooi/utils@1.0.12': {}
+  '@zooizooi/utils@1.0.16': {}
 
   acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:
@@ -1605,7 +1617,7 @@ snapshots:
     dependencies:
       typescript: 5.6.3
 
-  tweakpane@4.0.4: {}
+  tweakpane@4.0.5: {}
 
   type-check@0.4.0:
     dependencies:
@@ -1628,14 +1640,14 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plugin-glsl@1.3.0(rollup@4.24.3)(vite@5.4.10):
+  vite-plugin-glsl@1.3.0(rollup@4.24.3)(vite@5.4.11):
     dependencies:
       '@rollup/pluginutils': 5.1.3(rollup@4.24.3)
-      vite: 5.4.10
+      vite: 5.4.11
     transitivePeerDependencies:
       - rollup
 
-  vite@5.4.10:
+  vite@5.4.11:
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
