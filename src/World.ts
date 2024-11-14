@@ -1,24 +1,14 @@
-import { BoxGeometry, Mesh, MeshStandardMaterial, PointLight, Scene } from 'three';
-import Debugger, { DebuggerFolder } from '@/Debugger';
-import onUpdate from '@/hooks/onUpdate';
+import { PointLight, Scene } from 'three';
+import Box from '@/Box';
+import Experiment from '@/Experiment';
 
 export default class World {
     public scene = new Scene();
-    private debugger: DebuggerFolder;
-    private box: Mesh;
 
     constructor() {
-        this.debugger = this.createDebugger();
         this.createLights();
-        this.box = this.createBox();
-
-        // Hooks
-        onUpdate(this, this.update);
-    }
-
-    private createDebugger() {
-        const debug = Debugger.addFolder({ title: 'World' });
-        return debug;
+        this.createBox();
+        this.createExperiment();
     }
 
     private createLights() {
@@ -26,18 +16,15 @@ export default class World {
         pointLight.position.set(5, 5, 0);
         this.scene.add(pointLight);
     }
-
     private createBox() {
-        const geometry = new BoxGeometry();
-        const material = new MeshStandardMaterial();
-        const mesh = new Mesh(geometry, material);
-        this.scene.add(mesh);
-        return mesh;
+        const box = new Box();
+        this.scene.add(box);
+        return box;
     }
 
-    private update() {
-        this.box.rotation.x += 0.01;
-        this.box.rotation.y += 0.01;
-        this.box.rotation.z += 0.01;
+    private createExperiment() {
+        const experiment = new Experiment();
+        this.scene.add(experiment);
+        return experiment;
     }
 }
