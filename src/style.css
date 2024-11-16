@@ -26,12 +26,9 @@ body {
     margin: 0;
 }
 
+/** Tweakpane */
 .tp-dfwv > div > div.tp-rotv_c > div > div.tp-fldv_c {
     padding: 0;
-}
-
-body > div > div > div.tp-rotv_c > div > div.tp-fldv_i {
-    display: none;
 }
 
 .tp-tbpv_c>.tp-cntv, .tp-fldv_c>.tp-cntv {
