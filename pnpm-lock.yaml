@@ -14,6 +14,9 @@ importers:
       '@zooizooi/asset-loader':
         specifier: ^1.2.1
         version: 1.2.1
+      '@zooizooi/three-customize-material':
+        specifier: ^1.0.2
+        version: 1.0.2
       '@zooizooi/utils':
         specifier: ^1.0.16
         version: 1.0.16
@@ -445,6 +448,9 @@ packages:
   '@zooizooi/eslint-config@1.1.2':
     resolution: {integrity: sha512-YfuykRIPptjfRlcx0pGP7mx3R1Y5IMkK6bUzAv6bP8aypyZMDRffr3oa6ndYpbLuVpeDMmV1Leg7QRIkSO2JIg==, tarball: https://npm.pkg.github.com/download/@zooizooi/eslint-config/1.1.2/d0b07f426ae3d3113c3f38f949bed19bcd483a70}
 
+  '@zooizooi/three-customize-material@1.0.2':
+    resolution: {integrity: sha512-2afkYyfdrExb4tSRU7QV1Na9epz3HKGxzdw7Co7riqEeRnqHxU8gzaM3zke1FNgpc/SFp1+dh7CPp8A4+xshFg==, tarball: https://npm.pkg.github.com/download/@zooizooi/three-customize-material/1.0.2/7ca59e3f8ddb4cc95354061b580515165f0c2375}
+
   '@zooizooi/utils@1.0.16':
     resolution: {integrity: sha512-0hEuFbDfYaHQeIncHEg4tOzBPGHKAu02IKl/IRx9YNlcVTa7zg3GpvQZrJrWIIjbJ9wOhubcTJIUDdF164ClwA==, tarball: https://npm.pkg.github.com/download/@zooizooi/utils/1.0.16/f593154b74a862ecee25135cce0747c4012488f1}
 
@@ -810,6 +816,9 @@ packages:
 
   text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
+
+  three@0.163.0:
+    resolution: {integrity: sha512-HlMgCb2TF/dTLRtknBnjUTsR8FsDqBY43itYop2+Zg822I+Kd0Ua2vs8CvfBVefXkBdNDrLMoRTGCIIpfCuDew==}
 
   three@0.170.0:
     resolution: {integrity: sha512-FQK+LEpYc0fBD+J8g6oSEyyNzjp+Q7Ks1C568WWaoMRLW+TkNNWmenWeGgJjV105Gd+p/2ql1ZcjYvNiPZBhuQ==}
@@ -1228,6 +1237,10 @@ snapshots:
       - supports-color
       - typescript
 
+  '@zooizooi/three-customize-material@1.0.2':
+    dependencies:
+      three: 0.163.0
+
   '@zooizooi/utils@1.0.16': {}
 
   acorn-jsx@5.3.2(acorn@8.14.0):
@@ -1606,6 +1619,8 @@ snapshots:
       has-flag: 4.0.0
 
   text-table@0.2.0: {}
+
+  three@0.163.0: {}
 
   three@0.170.0: {}
 

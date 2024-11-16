@@ -19,6 +19,7 @@
   "dependencies": {
     "@tweakpane/plugin-essentials": "^0.2.1",
     "@zooizooi/asset-loader": "^1.2.1",
+    "@zooizooi/three-customize-material": "^1.0.2",
     "@zooizooi/utils": "^1.0.16",
     "gsap": "^3.12.5",
     "three": "^0.170.0",
