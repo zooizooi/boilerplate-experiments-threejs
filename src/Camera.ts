@@ -1,5 +1,5 @@
 // Vendor
-import { PerspectiveCamera, Vector3 } from 'three/webgpu';
+import { PerspectiveCamera, Vector3 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 import { ButtonGridApi } from '@tweakpane/plugin-essentials';
 import { KeyboardHandler, LocalStorage } from '@zooizooi/utils';
