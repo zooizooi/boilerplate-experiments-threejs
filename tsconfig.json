@@ -19,7 +19,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    
+
+    "types": [
+        "vite-plugin-glsl/ext"
+    ],
     "baseUrl": ".",
     "paths": {
         "@/*": ["src/*"]
