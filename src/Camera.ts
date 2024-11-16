@@ -1,12 +1,17 @@
-import { PerspectiveCamera, Vector3 } from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+// Vendor
+import { PerspectiveCamera, Vector3 } from 'three/webgpu';
+import { OrbitControls } from 'three/examples/jsm/Addons.js';
+import { ButtonGridApi } from '@tweakpane/plugin-essentials';
 import { KeyboardHandler, LocalStorage } from '@zooizooi/utils';
 import { KEY_DOWN, KeyDirection } from '@zooizooi/utils/modules/KeyboardHandler';
+
+// Modules
 import Debugger, { DebuggerFolder } from '@/Debugger';
+import Globals from '@/Globals';
+
+// Hooks
 import onWindowResize from '@/hooks/onWindowResize';
 import onUpdate from '@/hooks/onUpdate';
-import Globals from '@/Globals';
-import { ButtonGridApi } from '@tweakpane/plugin-essentials';
 
 const DEFAULT_CAMERA_POSITION = new Vector3(0, 5, 0);
 const LOCAL_STORAGE_CAMERA_SETTINGS = 'camera-settings';
