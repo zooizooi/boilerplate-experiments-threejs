@@ -13,7 +13,7 @@ export default class Renderer {
         onWindowResize(this, this.resize);
     }
 
-    private createRenderer(): WebGLRenderer {
+    private createRenderer() {
         const renderer = new WebGLRenderer({
             antialias: true,
         });
@@ -22,11 +22,11 @@ export default class Renderer {
         return renderer;
     }
 
-    public render(scene: Scene, camera: Camera): void {
+    public render(scene: Scene, camera: Camera) {
         this.renderer.render(scene, camera);
     }
 
-    public resize(): void {
+    public resize() {
         this.renderer.setSize(window.innerWidth, window.innerHeight);
     }
 }
