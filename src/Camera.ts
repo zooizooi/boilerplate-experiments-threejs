@@ -14,7 +14,7 @@ import onWindowResize from '@/hooks/onWindowResize';
 import onUpdate from '@/hooks/onUpdate';
 
 const DEFAULT_CAMERA_POSITION = new Vector3(0, 5, 0);
-const LOCAL_STORAGE_CAMERA_SETTINGS = 'camera-settings';
+const LOCAL_STORAGE_CAMERA_SETTINGS = `${Globals.projectName}-camera-settings`;
 
 export default class PortalCamera {
     public camera: PerspectiveCamera;
