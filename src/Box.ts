@@ -1,5 +1,5 @@
 import { BoxGeometry, Mesh, MeshStandardMaterial, Object3D } from 'three';
-import onUpdate from '@/hooks/onUpdate';
+import onUpdate, { UpdateParams } from '@/hooks/onUpdate';
 
 export default class Box extends Object3D {
     private box: Mesh;
@@ -20,9 +20,9 @@ export default class Box extends Object3D {
         return mesh;
     }
 
-    private update() {
-        this.box.rotation.x += 0.01;
-        this.box.rotation.y += 0.01;
-        this.box.rotation.z += 0.01;
+    private update({ delta }: UpdateParams) {
+        this.box.rotation.x += delta * 0.8;
+        this.box.rotation.y += delta * 0.8;
+        this.box.rotation.z += delta * 0.8;
     }
 }

@@ -38,4 +38,5 @@ function onUpdate(scopeOrCallback: any | Function, callback?: Function) {
 export default onUpdate;
 export interface UpdateParams {
     delta: number;
+    time: number;
 }
