@@ -28,7 +28,8 @@ body {
 
 /** Tweakpane */
 .tp-dfwv > div > div.tp-rotv_c > div > div.tp-fldv_c {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .tp-tbpv_c>.tp-cntv, .tp-fldv_c>.tp-cntv {
