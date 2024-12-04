@@ -16,5 +16,32 @@ new KeyboardHandler({
     },
 });
 
+declare module 'tweakpane' {
+    interface FolderApi {
+        addSaveButton(settingsName: string, settings: () => object): void;
+    }
+}
+
+FolderApi.prototype.addSaveButton = function(settingsName: string, settings: () => object) {
+    setTimeout(() => {
+        this.addButton({ title: 'Save' }).on('click', async() => {
+            const data = {
+                name: settingsName,
+                settings: settings(),
+            };
+
+            await fetch('http://localhost:3001/api/save-settings', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            }).then(() => {
+                console.log(`💾 Settings saved for: %c${settingsName}`, 'font-weight: bold; color: #fffdbc;');
+            });
+        });
+    }, 0);
+};
+
 export type DebuggerFolder = FolderApi;
 export default pane.addFolder({ title: '' });

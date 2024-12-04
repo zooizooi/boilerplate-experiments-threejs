@@ -13,6 +13,9 @@ import Globals from '@/Globals';
 import onWindowResize from '@/hooks/onWindowResize';
 import onUpdate from '@/hooks/onUpdate';
 
+// Settings
+import settings from '@/settings/camera.json';
+
 const DEFAULT_CAMERA_POSITION = new Vector3(0, 5, 0);
 const LOCAL_STORAGE_CAMERA_SETTINGS = `${Globals.projectName}-camera-settings`;
 
@@ -46,6 +49,12 @@ export default class PortalCamera {
 
     private createDebugger() {
         const debug = Debugger.addFolder({ title: 'Camera' });
+        debug.addSaveButton('camera', () => {
+            return {
+                fov: this.camera.fov,
+            };
+        });
+
         const positionButtonGrid = debug.addBlade({
             view: 'buttongrid',
             size: [2, 1],
@@ -64,7 +73,7 @@ export default class PortalCamera {
     }
 
     private createCamera() {
-        const camera = new PerspectiveCamera(50, 1);
+        const camera = new PerspectiveCamera(settings.fov, 1);
         camera.position.copy(DEFAULT_CAMERA_POSITION);
         this.debugger.addBinding(camera, 'fov', { min: 1, max: 180 }).on('change', () => camera.updateProjectionMatrix());
         return camera;
