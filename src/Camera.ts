@@ -16,7 +16,7 @@ import onUpdate from '@/hooks/onUpdate';
 // Settings
 import settings from '@/settings/camera.json';
 
-const DEFAULT_CAMERA_POSITION = new Vector3(0, 5, 0);
+const DEFAULT_CAMERA_POSITION = new Vector3(0, 0, 5);
 const LOCAL_STORAGE_CAMERA_SETTINGS = `${Globals.projectName}-camera-settings`;
 
 export default class PortalCamera {
