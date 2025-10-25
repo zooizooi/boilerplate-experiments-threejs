@@ -16,6 +16,7 @@ export default class World {
         pointLight.position.set(5, 5, 0);
         this.scene.add(pointLight);
     }
+
     private createBox() {
         const box = new Box();
         this.scene.add(box);
