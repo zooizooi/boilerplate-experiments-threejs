@@ -1,6 +1,9 @@
+// Vendor
 import { PointLight, Scene } from 'three';
-import Box from '@/Box';
-import Experiment from '@/Experiment';
+
+// Components
+import Box from '@/components/Box';
+import Experiment from '@/components/Experiment';
 
 export default class World {
     public scene = new Scene();

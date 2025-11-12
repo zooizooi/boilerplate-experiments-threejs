@@ -7,7 +7,7 @@ import { KEY_DOWN, KeyDirection } from '@zooizooi/utils/modules/KeyboardHandler'
 
 // Modules
 import Tune, { TuneFolder } from '@/modules/Tune';
-import Globals from '@/Globals';
+import Globals from '@/modules/Globals';
 
 // Hooks
 import onWindowResize from '@/hooks/onWindowResize';

@@ -1,26 +1,21 @@
 // Style
 import './style.css';
 
-// Vendor
-import AssetLoader, { ImageLoader, GltfLoader, TextureLoader } from '@zooizooi/asset-loader';
-
 // Modules
-import Assets from '@/Assets';
-import Renderer from '@/Renderer';
-import Globals from '@/Globals';
-import World from '@/World';
+import Assets from '@/modules/Assets';
+import Renderer from '@/modules/Renderer';
+import Globals from '@/modules/Globals';
+import World from '@/modules/World';
+import Camera from '@/modules/Camera';
 
 // Hooks
 import onUpdate from '@/hooks/onUpdate';
 
 // Configs
 import assets from '@/configs/assets';
-import Camera from '@/Camera';
 
-// AssetLoader
-AssetLoader.addLoader('gltf', GltfLoader, { decoderPath: '/draco/' });
-AssetLoader.addLoader('image', ImageLoader);
-AssetLoader.addLoader('texture', TextureLoader);
+// Asset loaders
+import '@/modules/Loaders';
 
 Assets.loadList(assets).then(() => {
     // Renderer

@@ -1,3 +1,4 @@
+// Vendor
 import { FolderApi, Pane } from 'tweakpane';
 import * as EssentialsPlugin from '@tweakpane/plugin-essentials';
 import { KeyboardHandler } from '@zooizooi/utils';
