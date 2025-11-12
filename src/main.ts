@@ -29,6 +29,7 @@ Assets.loadList(assets).then(() => {
 
     // Camera
     const camera = new Camera();
+    Globals.camera = camera;
 
     onUpdate(() => {
         renderer.render(world.scene, camera.camera);

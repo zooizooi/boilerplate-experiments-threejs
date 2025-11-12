@@ -1,7 +1,5 @@
-// Vendor
-import { Camera } from 'three';
-
 // Modules
+import Camera from '@/modules/Camera';
 import Renderer from '@/modules/Renderer';
 import World from '@/modules/World';
 
