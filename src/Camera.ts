@@ -6,7 +6,7 @@ import { KeyboardHandler, LocalStorage } from '@zooizooi/utils';
 import { KEY_DOWN, KeyDirection } from '@zooizooi/utils/modules/KeyboardHandler';
 
 // Modules
-import Debugger, { DebuggerFolder } from '@/Debugger';
+import Tune, { TuneFolder } from '@/modules/Tune';
 import Globals from '@/Globals';
 
 // Hooks
@@ -16,17 +16,18 @@ import onUpdate from '@/hooks/onUpdate';
 // Settings
 import settings from '@/settings/camera.json';
 
+// Constants
 const DEFAULT_CAMERA_POSITION = new Vector3(0, 0, 5);
 const LOCAL_STORAGE_CAMERA_SETTINGS = `${Globals.projectName}-camera-settings`;
 
 export default class Camera {
     public camera: PerspectiveCamera;
     public controls: OrbitControls | undefined;
-    private debugger: DebuggerFolder;
+    private tune: TuneFolder;
 
     constructor() {
         this.createKeyboardHandler();
-        this.debugger = this.createDebugger();
+        this.tune = this.createTune();
         this.camera = this.createCamera();
         this.controls = this.createControls();
         this.loadCameraPosition();
@@ -47,15 +48,15 @@ export default class Camera {
         });
     }
 
-    private createDebugger() {
-        const debug = Debugger.addFolder({ title: 'Camera' });
-        debug.addSaveButton('camera', () => {
+    private createTune() {
+        const tune = Tune.addFolder({ title: 'Camera' });
+        tune.addSaveButton('camera', () => {
             return {
                 fov: this.camera.fov,
             };
         });
 
-        const positionButtonGrid = debug.addBlade({
+        const positionButtonGrid = tune.addBlade({
             view: 'buttongrid',
             size: [2, 1],
             cells: (x: number, y: number) => ({
@@ -69,13 +70,13 @@ export default class Camera {
             if (event.cell.title === 'Store') this.storeCameraPosition();
             if (event.cell.title === 'Reset') this.resetCameraPosition();
         });
-        return debug;
+        return tune;
     }
 
     private createCamera() {
         const camera = new PerspectiveCamera(settings.fov, 1);
         camera.position.copy(DEFAULT_CAMERA_POSITION);
-        this.debugger.addBinding(camera, 'fov', { min: 1, max: 180 }).on('change', () => camera.updateProjectionMatrix());
+        this.tune.addBinding(camera, 'fov', { min: 1, max: 180 }).on('change', () => camera.updateProjectionMatrix());
         return camera;
     }
 
@@ -91,7 +92,7 @@ export default class Camera {
             position: this.camera.position,
             target: this.controls?.target,
         });
-        this.debugger.refresh();
+        this.tune.refresh();
         console.log('📷 Camera position stored');
     }
 
@@ -100,7 +101,7 @@ export default class Camera {
         if (!data) return;
         this.camera.position.set(data.position.x, data.position.y, data.position.z);
         this.controls?.target.set(data.target.x, data.target.y, data.target.z);
-        this.debugger.refresh();
+        this.tune.refresh();
         console.log('📷 Camera position loaded');
     }
 
@@ -108,7 +109,7 @@ export default class Camera {
         this.camera.position.copy(DEFAULT_CAMERA_POSITION);
         this.controls?.target.set(0, 0, 0);
         LocalStorage.remove(LOCAL_STORAGE_CAMERA_SETTINGS);
-        this.debugger.refresh();
+        this.tune.refresh();
         console.log('📷 Camera position was reset');
     }
 

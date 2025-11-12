@@ -22,9 +22,9 @@ declare module 'tweakpane' {
     }
 }
 
-FolderApi.prototype.addSaveButton = function(settingsName: string, settings: () => object) {
+FolderApi.prototype.addSaveButton = function (settingsName: string, settings: () => object) {
     setTimeout(() => {
-        this.addButton({ title: 'Save' }).on('click', async() => {
+        this.addButton({ title: 'Save' }).on('click', async () => {
             const data = {
                 name: settingsName,
                 settings: settings(),
@@ -43,5 +43,20 @@ FolderApi.prototype.addSaveButton = function(settingsName: string, settings: () 
     }, 0);
 };
 
-export type DebuggerFolder = FolderApi;
-export default pane.addFolder({ title: '' });
+const folders = new Map();
+const originalAddFolder = FolderApi.prototype.addFolder;
+FolderApi.prototype.addFolder = function addFolder(params) {
+    const folder = originalAddFolder.call(this, params);
+    folders.set(params.title, folder);
+    return folder;
+};
+
+export interface FolderApiExtended extends FolderApi {
+    folders: Map<string, FolderApi>;
+}
+
+const main = pane.addFolder({ title: '' }) as FolderApiExtended;
+main.folders = folders;
+export default main;
+
+export { FolderApi as TuneFolder };
