@@ -27,6 +27,7 @@
     "@zooizooi/three-customize-material": "^1.0.3",
     "@zooizooi/utils": "^1.0.25",
     "gsap": "^3.13.0",
+    "stats-gl": "^3.7.0",
     "three": "^0.179.1",
     "tweakpane": "^4.0.5"
   }
