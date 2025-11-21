@@ -1,5 +1,5 @@
 import { BoxGeometry, Mesh, MeshStandardMaterial, Object3D } from 'three';
-import onUpdate, { UpdateParams } from '@/hooks/onUpdate';
+import onUpdate, { type UpdateParams } from '@/hooks/onUpdate';
 
 export default class Box extends Object3D {
     private box: Mesh;

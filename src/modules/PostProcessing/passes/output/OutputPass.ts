@@ -6,10 +6,12 @@ import { ShaderPass } from 'three/examples/jsm/Addons.js';
 import vertexShader from './shaders/vertex.glsl';
 
 // Chuncks
-import { Chunck } from './chuncks/Chunck';
 import VignetteV2 from './chuncks/VignetteV2';
 import ToneMapping from './chuncks/ToneMapping';
 import ColorSpace from './chuncks/ColorSpace';
+
+// Types
+import type { Chunck } from './chuncks/Chunck';
 
 export default class OutputPass extends ShaderPass {
     private chuncks = [

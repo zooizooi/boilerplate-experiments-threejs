@@ -1,4 +1,5 @@
-import { Asset } from '@zooizooi/asset-loader';
+// Types
+import type { Asset } from '@zooizooi/asset-loader';
 
 /**
  * Example Asset:

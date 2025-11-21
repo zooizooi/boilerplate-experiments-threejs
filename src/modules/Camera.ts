@@ -3,7 +3,7 @@ import { PerspectiveCamera, Vector3 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 import { ButtonGridApi } from '@tweakpane/plugin-essentials';
 import { KeyboardHandler, LocalStorage } from '@zooizooi/utils';
-import { KEY_DOWN, KeyDirection } from '@zooizooi/utils/modules/KeyboardHandler';
+import { KEY_DOWN, type KeyDirection } from '@zooizooi/utils/modules/KeyboardHandler';
 
 // Modules
 import Tune, { TuneFolder } from '@/modules/Tune';
